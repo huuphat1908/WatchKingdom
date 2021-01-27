@@ -1,0 +1,462 @@
+/* Thêm font chữ ngoài cho trang */
+@font-face{
+    src:url(../Fonts/Open_Sans/OpenSans-Regular.ttf);
+    font-family: Open_Sans;
+}
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+}
+/*Header start*/
+/* end */
+
+/* trang trí cho slogan */
+#slogan
+{   
+    
+    width:100%;
+    height:60px;
+    background-color:black;
+    color:#FFFFFF;
+}
+
+/* end */
+/* css cho Number-Product */
+#Number-Product
+{   
+    
+    width:100%;
+    height:70px;
+    background-color:rgb(201, 197, 197);
+    color:black;
+    line-height:70px;
+    padding-left: 8.9%;
+    border: 1px solid rgb(192, 189, 189);
+}
+/* css cho Filter */
+#Filter
+{   
+    
+    width:100%;
+    height:70px;
+    color:black;
+    line-height:70px;
+
+}
+/* Css cho bộ chọn trong filters */
+#Bo-Chon
+{
+    width: 15%;
+    height:70px;
+    border-left:1px solid gray;
+    text-align: center;
+    border-right:1px solid gray;
+    cursor: pointer;
+}
+.Bo-Chon-responsive
+{
+    border-bottom:3px solid gray;
+}
+/* Chia cột cho các bộ chọn trong filter*/
+#Filter-row
+{
+    width:100%;
+    overflow:auto;
+}
+#Filter-col1
+{
+    width:15%;
+    float:left;
+    
+}
+#Filter-col1 label
+{
+    margin-left: 60%;
+    
+}
+#Filter-col2
+{
+    width:30%;
+    float:left;
+}
+#Filter-col3
+{
+    width:55%;
+    float:left;
+    font-weight: 700;
+}
+/* css cho vị trí của bộ chọn filter trong trang*/
+#Div-BoChon
+{
+    position: absolute;
+    width:100%;
+    height:500px;
+    background-color: white;
+    top:0;
+    z-index:2;
+    display: none;
+    border:1px solid rgb(192, 189, 189);
+
+}
+/* css cho vị trí thông tin sản phẩm trong trang*/
+#Div-SanPham
+{
+    background-color:white;
+    height:auto;
+    position:relative;
+    top:0;
+    padding-top:50px;
+    z-index:1;
+}
+/* khi người dùng chọn bộ chọn filter thì thông tin sản phẩm sẽ mờ*/
+.Div-BoChon-responsive
+{
+    opacity: 0.3;
+}
+
+/* tạo bộ chọn select từ thẻ ul và li*/
+.list-unstyled { 
+    height: 30px;
+    width: 170px;
+    list-style-type: none;
+    display:inline-block;
+    background-color: white;
+    }
+    .list-unstyled li
+    {
+        padding-left:15px;
+        width: 170px;
+        z-index:3;
+        position: relative;
+        border:1px;
+        cursor: pointer;  
+        margin-top:-1px;
+    }
+    .list-unstyled li:not(.init) 
+    {   
+
+        width: 170px;
+        height:40px;
+        display: none;
+        background: #ddd;
+        line-height:40px;
+    }
+    .list-unstyled li:not(.init):hover
+    {
+        background-color:rgb(157, 157, 161);
+    } 
+    .list-unstyled li.selected:not(.init):after
+    {
+        font-family: 'FontAwesome';
+        content:"\f00c";
+        padding-left:20px;
+        font-size:20px;
+    }
+    .list-unstyled li.init:after
+    {
+        cursor: pointer;
+        border:0px;
+        font-family: 'FontAwesome';
+        content:"\f0d7";
+        font-size:25px;
+        padding-left:5px;
+    }
+    /*end!!!*/
+
+    /* Css cho bottom xem thêm sản phẩm*/
+    #buton-Xemthem
+    {
+        margin:30px;
+    }
+
+    /* css cho button show filter*/
+    #show
+    {
+        width:250px;
+        height:40px;
+        cursor: pointer;
+        font-weight: 700;
+        border:none;
+    }
+    #show:active
+    {
+        background-color:rgb(134, 132, 132);
+        color:white;
+    }
+    #show:focus
+    {
+        outline: 0;     
+        outline-style: none;     
+        outline-width: 0;
+    }
+
+    #show::after
+    {
+        
+        border:none;
+        font-family: 'FontAwesome';
+        content:"\f0d7";
+        font-size:25px;
+        padding-left:5px;
+    }
+    /*end!!!*/
+
+
+    /* Css cho các bộ chọn trong filer */
+    #BoChon-Row1
+    {
+        overflow:auto;
+        width:100%;
+        height:92%;
+    }
+    #BoChon-Row2
+    {
+        border-top:1px solid  rgb(192, 189, 189);
+        height:8%;
+        width:100%;
+        padding:7px;
+    }
+    #BoChon-Row1 #BoChon-Col1
+    {  
+        float:left;
+        width:28%;
+        border-right:1px solid  rgb(192, 189, 189);
+        height:100%;
+        padding:15px;
+    }
+    #BoChon-Row1 #BoChon-Col1 table
+    {
+        width:60%;
+    }
+    #BoChon-Row1 #BoChon-Col1 table #td1
+    {
+        width:35%;
+    }
+    #BoChon-Row1 #BoChon-Col1 table #td2
+    {
+        width:65%;
+    }
+    
+    #BoChon-Row1 #BoChon-Col2
+    {
+        float:left;
+        width:24%;
+    }
+    #BoChon-Row1 #BoChon-Col2 table
+    {
+        width:60%;
+    }
+    #BoChon-Row1 #BoChon-Col3
+    {
+        float:left;
+        width:24%;
+    }
+    #BoChon-Row1 #BoChon-Col3 table td
+    {
+        width:20%;
+    }
+    #BoChon-Row1 #BoChon-Col4
+    {
+        float:left;
+        width:24%;
+    }
+    #BoChon-Row1 #BoChon-Col4 table
+    {
+        width:80%;
+    }
+    #BoChon-Row1 #BoChon-Col4 table td
+    {
+        width:20%;
+    }
+    .div-FaceSize
+    {
+            border-radius:50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            width:50px;
+            height:50px;
+            border:1px solid  rgb(192, 189, 189);
+            display: inline-block;
+            padding-top:11px;
+    }
+    .div-img-color
+    {
+            border-radius:50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            width:50px;
+            height:50px;
+            border:1px solid rgb(192, 189, 189);
+            display: inline-block;
+            padding:4px;
+    }
+    .div-img-day
+    {
+            border-radius:50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            width:61px;
+            height:61px;
+            border:1px solid  rgb(192, 189, 189);
+            display: inline-block;
+    }
+    .img-color
+    {
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+            width:40px;
+            height:40px;
+    }
+    .img-day
+    {
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        width:60px;
+        height:60px;
+    }
+    .clock-Colection
+    {
+        width:80px;
+        height:92px;
+    }
+    /* end!!*/
+    /* css cho thông báo khi chọn các bộ chọn trong fliter*/
+    #Strap
+    {
+        background-color:black;
+        color:white;
+        width:80px;
+        height: 40px;
+        margin:15px;
+        padding:5px;
+        display: none;
+    }
+
+    #Colors
+    {
+        background-color:black;
+        color:white;
+        width:80px;
+        margin:15px;
+        padding:5px;
+        display: none;
+    }
+    #Case-size
+    {
+        background-color:black;
+        color:white;
+        width:60px;
+        margin:15px;
+        padding:5px;
+        display: none;
+    }
+    .close
+    {
+        margin-left:20px;
+    }
+    
+    /*end*/
+    /* css Cho sản phẩm */
+    .FvIcon
+    {
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        width:30px;
+        height:30px;
+        position:absolute;
+        right:20px ;
+        top: 20px;
+        display:none;
+        border:1px solid  rgb(192, 189, 189);
+        padding-top:5px;
+        color: rgb(136, 128, 128);
+        background-color: white;
+        cursor: pointer;
+
+    }
+    .Show-FvIcon
+        {
+            background-color: red;
+            color:white;
+        }
+    .img-responsive
+        {
+            height:80%;
+            height:var(--width);
+            /* width:54%; */
+        }
+    .product-bottom
+        {
+            margin:15px;
+        }
+    .item_price
+        {
+            margin-top:15px;
+            margin-bottom: 10px;
+        }
+        
+    .Sale-Product{
+        position:relative;
+        width:100%;
+        height:430px;
+    }
+    .Normal-Product{
+        position:relative;
+        width:100%;
+        height:430px;
+    }
+    .Discount
+    {
+        width:60px;
+        height:35px;
+        position:absolute;
+        border-radius: 4px;
+        background-color:rgb(156, 4, 4);
+        color:white;
+        font-weight: 700;
+        left:20px;top: 20px;
+        line-height: 35px;
+    }     
+    .Button-Buy{
+        margin-top:10px;
+        width:150px;
+        height:30px;
+        display:none;
+    }
+    .Product-Hover
+    {
+        box-shadow: -10px 0 10px -10px #333, 10px 0 10px -10px #333;
+    }
+    .Button-Buy-Responsive{
+        background-color:black;
+        color:white;
+    }
+    a
+    {
+        text-decoration: none;
+        color:black;
+    }
+    a:hover
+    {
+        text-decoration: underline;
+    }
+    a:visited{
+        text-decoration: underline;
+        cursor: default;
+    } 
+    .title-BoChon
+    {
+        padding-bottom:20px;
+    }
+    
